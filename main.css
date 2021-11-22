@@ -1,0 +1,23 @@
+:root
+{
+    --main-bg-color: aliceblue;
+    --navbar--margin: 5%;
+    --navbar-font: Verdana, Geneva, Tahoma, sans-serif;
+    --navbar-text-size: 1.5rem;
+}
+
+body
+{
+    background-color: var(--main-bg-color);
+    background-color: rgba(223, 241, 185, 0.932);;
+    margin-left: 30%;
+    margin-right: 30%;
+    
+}
+@media screen and (max-width: 1000px)
+{
+    body
+    {
+        margin: 0;
+    }
+}

@@ -1,0 +1,95 @@
+.navBar
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.homePanel, .showPlacePanel, .teamPanel, .contactsPanel
+{
+    margin-right: var(--navbar--margin);
+    
+}
+.homePanel, .showPlacePanel, .teamPanel, .contactsPanel :hover
+{
+    cursor: pointer;
+}
+.home, .showPlace, .team, .contacts
+{
+    font-family: var(--navbar-font);
+    font-size: var(--navbar-text-size);
+    opacity: 60%;
+}
+.sitePresentationPanel
+{
+    display: flex;
+    flex-wrap: wrap;
+    height: 23rem;
+}
+.titlePanel
+{
+    width: 50%;
+    text-align: center;
+    background-color:rgba(153, 205, 50, 0.932);
+    color: white;
+}
+.teamTextPanel
+{
+    width: 50%;
+    text-align: center;
+    background-color:white;
+}
+.title, .teamText
+{
+    font-size: 2rem;
+    font-family: var(--navbar-font);
+    font-size: 1.7rem;
+}
+.teamText
+{
+    font-size: 1.3rem;
+}
+.muzei1TitlePanel
+{
+    text-align: center;
+    background-color:white;
+    width: 100%;
+    height: 4rem;
+    justify-content: center;
+    text-align: center;
+}
+.muzei1Title
+{
+    font-size: 2rem;
+    font-family: var(--navbar-font);
+    font-size: 1.7rem;
+    margin: 0;
+}
+.muzei1
+{
+    display: flex;
+    height: 23rem;
+    justify-content: center;
+}
+.muzei1ImagePanel
+{
+    width: 50%;
+}
+.muzei1Image
+{
+    width: 100%;
+    color: white;
+}
+.muzei1TextPanel
+{
+    width: 50%;
+    text-align: center;
+    background-color:rgba(153, 205, 50, 0.932);
+    color: white;
+}
+.muzei1Text
+{
+    font-family: var(--navbar-font);
+    font-size: 1.3rem;
+}
+
+
