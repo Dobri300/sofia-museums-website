@@ -9,7 +9,7 @@
 body
 {
     background-color: var(--main-bg-color);
-    background-color: rgba(223, 241, 185, 0.932);;
+    /* background-color: rgba(223, 241, 185, 0.932);; */
     margin-left: 30%;
     margin-right: 30%;
     
