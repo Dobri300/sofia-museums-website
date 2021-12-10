@@ -1,27 +1,91 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Sofia Museums</title>
-<link rel="stylesheet" href="main.css">
-<link rel="stylesheet" href="index.css">
-</head>
-<body>
-<div class="navBar">
-    <div class ="homePanel">
-    <p class="home">Начало</p>
-    </div>
-    <div class="showPlacePanel">
-    <p class="showPlace">Покажи дестинация</p>
-    </div>
-    <div class="teamPanel">
-    <p class="team">Екип</p>
-    </div>
-    <div class="contactsPanel">
-    <p class="contacts">Контакти</p>
-    </div>
-</div>
 
-<div class="sitePresentationPanel">
+<head>
+    <title>Sofia Museums</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="navBar">
+        <div class="homePanel">
+            <p class="home">Начало</p>
+        </div>
+        <div class="showPlacePanel">
+            <p class="showPlace">Покажи дестинация</p>
+        </div>
+        <div class="teamPanel">
+            <p class="team">Екип</p>
+        </div>
+        <div class="contactsPanel">
+            <p class="contacts">Контакти</p>
+        </div>
+    </div>
+
+    <div class="destinationsPanel">
+        <div class="muzei1Panel">
+            <div class="title1Panel">
+                <p>Природонаучния музей</p>
+            </div>
+            <div class="content1Panel">
+                <div onmouseover="hoverFunction('muzei1Image', 'button1Panel')" onmouseleave="leaveImage('muzei1Image', 'button1Panel')" class="image1Panel">
+                    <img class="muzei1Image" id="muzei1Image" src="assets/prirodoNauchenMuzei.jpg" alt="">
+                    <div onmouseover="buttonHover('muzei1Image')" onmouseleave="buttonLeave('muzei1Image')"
+                        id="button1Panel" class="button1Panel">
+                        <button onclick="showInfoButtonClick('information1Panel')" class="showInformationButton1">Покажи
+                            информация</button>
+                    </div>
+                </div>
+                <div id="information1Panel" class="information1Panel">
+                    <p class="text1">Националният исторически музей се намира на адрес 1618 София, ул. „Витошко лате“
+                        №16. Той е един
+                        от най-големите исторически музеи на Балканския полуостров и най-големият в България.
+                        В него посетителите ще видят над 650 хиляди експонати от исторически и археологически характер.
+                        Или, ако предпочитат, може да се отбият до множеството филиали на музея: Боянската църка,
+                        обявена за световно културно наследство от ЮНЕСКО, музеят „Параход Радецки“ – да, онзи параход
+                        Радецки, с който е плавал Христо Ботев – или Земенският манастир „Св. Йоян Богослов“.
+
+                        <br>
+                        <br>
+                        Музеят е създаден през 1973 година. Понастоящем съдържа множество колекции – например
+                        „Новожелязна епоха“, „Оръжие“, „Традиционно облекло“, „Космос“, „Часовници“ и каквото още сърце
+                        желае.
+                        <br>
+                        <br>
+                        Музеят работи целогодишно, с почивни дни само през 1 януари, неделята на Великден, и 24 и 25
+                        декември.
+                        <br>
+                        <br>
+                        Работното време е от 9:30 до 18 часа.
+                        <br>
+                        <br> Сградата е приспособена за хора със специални
+                        потребности за придвижване като инвалидни колички.
+                        <br>
+                        <br>
+                        <br>
+                        Музеят се е погрижил и за децата
+                        <br>
+                        <br> – към него има специален образователен център. Музеят предлага
+                        също така интерактивни беседи и сувенири.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="muzei2Panel"></div>
+
+        <div class="muzei3Panel"></div>
+
+        <div class="muzei4Panel"></div>
+
+        <div class="muzei5Panel"></div>
+    </div>
+
+
+
+
+    <!-- <div class="sitePresentationPanel">
     <div class="titlePanel">
         <p class="title">Музеите в софия</p>
     </div>
@@ -34,7 +98,7 @@
     <div class="muzei1TitlePanel">
         <p class="muzei1Title">Национален природонаучен музей</p>
     </div>
-    <div class="muzei1">
+<div class="muzei1">
     <div class="muzei1ImagePanel">
         <img class="muzei1Image" src="assets/prirodoNauchenMuzei.jpg" alt="">
     </div>
@@ -43,9 +107,54 @@
     </div>
 </div>
 
-</body>
-</html>
+    <div class="muzei2TitlePanel">
+        <p class="muzei2Title">Национален природонаучен музей</p>
+    </div>
+<div class="muzei2">
+    <div class="muzei2ImagePanel">
+        <img class="muzei2Image" src="assets/prirodoNauchenMuzei.jpg" alt="">
+    </div>
+    <div class="muzei2TextPanel">
+        <p class="muzei2Text"> Този музей е...</p>
+    </div>
+</div> -->
 
+</body>
+
+</html>
+<script>
+    function hoverFunction(muzeiImageName, buttonPanelName) {
+        document.getElementById(muzeiImageName).style.filter = "blur(2px)";
+        document.getElementById(buttonPanelName).style.opacity = "1";
+    }
+    function leaveImage(muzeiImageName, buttonPanelName) {
+        document.getElementById(buttonPanelName).style.opacity = "0";
+        document.getElementById(muzeiImageName).style.filter = "blur(0px)";
+    }
+    function showInfoButtonClick(informationPanelName) {
+        if (document.getElementById(informationPanelName).style.display === "none") {
+            document.getElementById(informationPanelName).style.display = "flex";
+            document.getElementById(informationPanelName).style.transition = "0.1s ease";
+            document.getElementById(informationPanelName).style.filter = "blur(4px)";
+            document.getElementById(informationPanelName).style.filter = "";
+        }
+        else {
+            document.getElementById(informationPanelName).style.display = "none";
+            document.getElementById(informationPanelName).style.transition = "0.1s ease";
+            document.getElementById(informationPanelName).style.filter = "blur(4px)";
+
+        }
+    }
+    document.querySelector('.showInformationButton1').addEventListener('click', function() {
+  document.querySelector('.information1Panel.collapsible').classList.toggle('collapsed');
+});
+    function buttonHover(muzeiImageId) {
+        document.getElementById(muzeiImageId).style.filter = "blur(2px)";
+    }
+    function buttonLeave(muzeiImageId) {
+        document.getElementById(muzeiImageId).style.filter = "blur(0px)";
+    }
+</script>
 <!-- природонаучния музей
 , националния исторически музей
 , националния военноисторически музей
