@@ -3,6 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: blanchedalmond;
 }
 .homePanel, .showPlacePanel, .teamPanel, .contactsPanel
 {
@@ -19,7 +20,23 @@
     font-size: var(--navbar-text-size);
     opacity: 60%;
 }
-
+#introductionPanel
+{
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.705);
+    /* margin-top: 30px; */
+    background-color: rgba(255, 235, 205, 0.87);
+    height: auto;
+}
+#introductionText
+{
+    display: flex;
+    height: 0px;
+    transition: 0.5s;
+    margin-top: -10px;
+}
 .destinationsPanel
 {
     margin-top: 100px;

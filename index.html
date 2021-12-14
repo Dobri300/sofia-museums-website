@@ -22,7 +22,10 @@
             <p class="contacts">Контакти</p>
         </div>
     </div>
-
+    <div onmouseover="onIntroductionHover()" onmouseleave="onIntroductionLeave()" class="introductionPanel" id="introductionPanel">
+        <p class="introductionText" id="introductionText"> 
+        </p>
+    </div>
     <div class="destinationsPanel">
         <div class="muzei1Panel">
             <div class="title1Panel">
@@ -165,11 +168,27 @@
     document.querySelector('.showInformationButton1').addEventListener('click', function() {
   document.querySelector('.information1Panel.collapsible').classList.toggle('collapsed');
 });
-    function buttonHover(muzeiImageId) {
+    function buttonHover(muzeiImageId) 
+    {
         document.getElementById(muzeiImageId).style.filter = "blur(2px)";
     }
-    function buttonLeave(muzeiImageId) {
+    function buttonLeave(muzeiImageId) 
+    {
         document.getElementById(muzeiImageId).style.filter = "blur(0px)";
+    }
+    function onIntroductionHover()
+    {
+        console.debug("intr hover");
+        document.getElementById("introductionText").style.height = "40px";
+        document.getElementById("introductionText").innerHTML = "В София има десетки музеи, които си струва да посетите. Тук можете да се запознаете с пет от тях:";
+        document.getElementById("introductionText").style.marginTop = "0px";
+    }
+    function onIntroductionLeave()
+    {
+        console.debug("intr leave");
+        document.getElementById("introductionText").style.height = "5px";
+        document.getElementById("introductionText").innerHTML = "🠗";
+        document.getElementById("introductionText").style.marginTop = "-10px";
     }
 </script>
 <!-- природонаучния музей
