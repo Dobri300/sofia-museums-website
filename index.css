@@ -25,28 +25,39 @@
     margin-top: 100px;
     margin-left: 100px;
     margin-right: 100px;
-    height: 600px;
+    height: auto;
+    display: flex;
+
 }
-.muzei1Panel
+@media only screen and (max-width: 1000px)
+{
+.destinationsPanel
+{
+    flex-direction: column;
+}
+}
+.muzei1Panel, .muzei2Panel
 {
     width: 300px;
     display: flex;
     justify-content: center;
     flex-flow: column;
+    margin-right: 50px;
+    justify-content:flex-start;
 }
-.title1Panel
+.title1Panel, .title2Panel
 {
     font-size: 1.4rem;
     /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
-#muzei1Image
+#muzei1Image, #muzei2Image
 {
     width: 300px;
     transition: 1s ease;
     border-radius: 8px;
     border:1px solid rebeccapurple;
 }
-.showInformationButton1
+.showInformationButton1, .showInformationButton2
 {
     display: flex;
     position: sticky;
@@ -54,7 +65,7 @@
 
 
 /* //// */
-.showInformationButton1 {
+.showInformationButton1, .showInformationButton2 {
 	width: 150px;
     padding: 10.5px;
 	cursor: pointer;
@@ -68,7 +79,7 @@
     color: white;
 }
 
-.showInformationButton1:hover {
+.showInformationButton1:hover, .showInformationButton2:hover {
 	transform: translateY(-5px);
 	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
 }
@@ -76,7 +87,7 @@ button:focus {
 	outline: none;
 }
 /* ///// */
-#button1Panel
+#button1Panel, .button2Panel
 {
     margin-top:-140px;
     display: flex;
@@ -86,22 +97,23 @@ button:focus {
     transition: ease-in-out 0.5s;
     transition-delay: 0.2s;
 }
-#information1Panel
+#information1Panel, #information2Panel
 {
     border: 2px solid rgba(102, 51, 153, 0.418);
     padding: 5px;
-    margin-top: 160px;
+    margin-top: 130px;
     display: none;
     transition:transform 0.3s ease-out;
     height: auto;
 }
-.information1Panel.collapsed
+.information1Panel.collapsed, .information2Panel.collapsed
 {
     transform:scaleY(0);
 }
-.text1
+.text1, .text2
 {
     background-color:rgba(95, 158, 160, 0.247);
+    padding: 10px;
 }
 /* .sitePresentationPanel
 {

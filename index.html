@@ -12,9 +12,9 @@
         <div class="homePanel">
             <p class="home">Начало</p>
         </div>
-        <div class="showPlacePanel">
+        <!-- <div class="showPlacePanel">
             <p class="showPlace">Покажи дестинация</p>
-        </div>
+        </div> -->
         <div class="teamPanel">
             <p class="team">Екип</p>
         </div>
@@ -73,7 +73,23 @@
             </div>
         </div>
 
-        <div class="muzei2Panel"></div>
+        <div class="muzei2Panel">
+            <div class="title2Panel">
+                <p>Националния исторически музей</p>
+            </div>
+            <div class="content2Panel">
+                <div onmouseover="hoverFunction('muzei2Image', 'button2Panel')" onmouseleave="leaveImage('muzei2Image', 'button2Panel')" class="image2Panel">
+                    <img class="muzei2Image" id="muzei2Image" src="assets/prirodoNauchenMuzei.jpg" alt="">
+                    <div onmouseover="buttonHover('muzei2Image')" onmouseleave="buttonLeave('muzei2Image')"
+                        id="button2Panel" class="button2Panel">
+                        <button onclick="showInfoButtonClick('information2Panel')" class="showInformationButton2">Покажи
+                            информация</button>
+                    </div>
+                </div>
+                <div id="information2Panel" class="information2Panel">
+                    <p></p>
+                </div>
+        </div>
 
         <div class="muzei3Panel"></div>
 
